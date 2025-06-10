@@ -1,3 +1,17 @@
 .SortItems label{
     margin-right: 10px;
 }
+
+
+.SortItems{
+    margin-right: 40px;
+}
+
+label{
+    font-size: 25px
+}
+
+select {
+    width: 70px;
+    height: 35px;
+}

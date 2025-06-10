@@ -5,7 +5,7 @@ import './SearchForm.css'
 
 function SearchBar(){
     return(
-        <div>
+        <div className = "searchBar">
             <input type="text" />
             <button>Search</button>
         </div>

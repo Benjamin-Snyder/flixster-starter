@@ -16,7 +16,7 @@
     max-width: 10vw;
     min-width: 15vw;
 
-    max-height: 30vw;
+    max-height: 28vw;
     text-wrap: wrap;
 
 }
@@ -27,6 +27,8 @@
 
     max-width: 10vw;
     min-width: 15vw;
+
+    height: 35vw;
 
 }
 
