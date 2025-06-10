@@ -1,17 +1,11 @@
+
 import React from 'react';
 import './MoreButton.css';
-import MovieList from './MovieList';
 
-
-function MoreButton({ filter, searchQuery, pageNumber }) {
-
-    const newPage= ()=>{
-        <MovieList filter={filter} searchQuery={searchQuery} pageNumber={pageNumber} />
-    }
-
+function MoreButton({ onClick }) {
     return (
-    <button onClick={newPage}>Load More</button>
-);
+        <button onClick={onClick}>Load More</button>
+    );
 }
 
 export default MoreButton;

@@ -13,22 +13,22 @@ const MovieList = ({ filter, searchQuery, pageNumber }) => {
     const [movies, setMovies] = useState([]);
     const key = import.meta.env.VITE_API_KEY;
     const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`;
-    
+
 useEffect(() => {
 
     const options = {
-    method: 'GET',
-    headers: {
-    accept: 'application/json',
-    Authorization: `Bearer ${key}`
-    }
+        method: 'GET',
+        headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${key}`
+        }
     };
 
     fetch(url, options)
     .then(res => res.json())
-    .then(json => setMovies(json.results))
+    .then(json => setMovies(prevMovies => [...prevMovies, ...json.results]))
     .catch(err => console.error(err));
-}, []);
+}, [pageNumber]);
 
 
 const filteredMovies = movies.filter(movie =>

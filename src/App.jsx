@@ -34,7 +34,7 @@ const App = () => {
       </div>
 
       <div className = "moreButton">
-        <MoreButton onClick={handleMoreClick} filter={filter} searchQuery={searchQuery} pageNumber = {pageNumber}/>
+        <MoreButton onClick={handleMoreClick} />
       </div>
 
       <div className = "footer">
