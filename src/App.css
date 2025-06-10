@@ -44,3 +44,11 @@
     box-sizing: border-box;
     background-color: lightblue;
 }
+
+
+.footer{
+    padding: 5px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: lightblue;
+}

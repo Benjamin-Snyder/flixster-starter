@@ -32,11 +32,12 @@
 
 }
 
-.movieBox h1{
+.movieBox h3{
     font-size: 1.3vw;
+    margin-bottom: 0px;
 }
 
-.movieBox h2{
+.movieBox p{
     font-size: .8vw;
     padding-bottom: 0px;
 }

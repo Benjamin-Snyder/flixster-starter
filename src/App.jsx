@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Header from './Header';
 import MovieList from './MovieList.jsx';
+import Footer from './Footer.jsx';
 
 const App = () => {
   const [filter, setFilter] = useState('A-Z');
@@ -23,6 +24,10 @@ const App = () => {
 
       <div className="movieCard">
         <MovieList filter={filter} searchQuery={searchQuery} />
+      </div>
+
+      <div className = "footer">
+        <Footer />
       </div>
     </div>
   );
