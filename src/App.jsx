@@ -1,21 +1,26 @@
-import { useState } from 'react'
-import './App.css'
-import MovieCard from './MovieCard'
-import Header from './Header'
-import MovieList from './MovieList.jsx'
+import { useState } from 'react';
+import './App.css';
+import Header from './Header';
+import MovieList from './MovieList.jsx';
 
 const App = () => {
+  const [filter, setFilter] = useState('A-Z');
+
+  const handleFilterChange = (event) => {
+    setFilter(event.target.value);
+  };
+
   return (
     <div className="App">
       <div className="header">
-        <Header />
+        <Header onFilterChange={handleFilterChange} />
       </div>
 
       <div className="movieCard">
-        <MovieList />
+        <MovieList filter={filter} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

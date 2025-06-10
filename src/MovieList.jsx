@@ -12,7 +12,7 @@ headers: {
 }
 };
 
-const MovieList = () => {
+const MovieList = ({ filter }) => {
 const [movies, setMovies] = useState([]);
 
 useEffect(() => {
@@ -22,13 +22,24 @@ useEffect(() => {
     .catch(err => console.error(err));
 }, []);
 
+const sortedMovies = [...movies].sort((a, b) => {
+    if (filter === 'A-Z') {
+    return a.title.localeCompare(b.title);
+    } else if (filter === 'Release Date') {
+    return new Date(b.release_date) - new Date(a.release_date);
+    } else if (filter === 'Rating') {
+    return b.vote_average - a.vote_average;
+    }
+    return 0;
+});
+
 return (
     <div className="listOfMovies">
-    {movies.map((movie) => {
-        return <MovieCard key={movie.id} name={movie.title} rating={movie.vote_average} img={movie.poster_path} />
-    })}
+    {sortedMovies.map((movie) => (
+        <MovieCard key={movie.id} name={movie.title} rating={movie.vote_average} img={movie.poster_path} />
+    ))}
     </div>
-)
+);
 };
 
 export default MovieList;
