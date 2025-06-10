@@ -1,15 +1,17 @@
 import React from 'react';
-import './SearchForm.css'
+import './SearchForm.css';
 
+function SearchBar({ onSearchChange }) {
+const handleInputChange = (event) => {
+    onSearchChange(event.target.value);
+};
 
-
-function SearchBar(){
-    return(
-        <div className = "searchBar">
-            <input type="text" />
-            <button>Search</button>
-        </div>
-    )
+return (
+    <div className="searchBar">
+    <input type="text" onChange={handleInputChange} />
+    <button>Search</button>
+    </div>
+);
 }
 
 export default SearchBar;

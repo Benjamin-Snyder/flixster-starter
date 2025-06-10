@@ -12,7 +12,7 @@ headers: {
 }
 };
 
-const MovieList = ({ filter }) => {
+const MovieList = ({ filter, searchQuery }) => {
 const [movies, setMovies] = useState([]);
 
 useEffect(() => {
@@ -22,7 +22,11 @@ useEffect(() => {
     .catch(err => console.error(err));
 }, []);
 
-const sortedMovies = [...movies].sort((a, b) => {
+const filteredMovies = movies.filter(movie =>
+    movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+);
+
+const sortedMovies = [...filteredMovies].sort((a, b) => {
     if (filter === 'A-Z') {
     return a.title.localeCompare(b.title);
     } else if (filter === 'Release Date') {

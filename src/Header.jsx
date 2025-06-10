@@ -3,11 +3,11 @@ import './Header.css';
 import SearchBar from './SearchForm.jsx';
 import Filter from './Filter.jsx';
 
-function Header({ onFilterChange }) {
+function Header({ onFilterChange, onSearchChange }) {
 return (
     <div className="top">
     <div className="searchBar">
-        <SearchBar />
+        <SearchBar onSearchChange={onSearchChange} />
     </div>
     <div className="headerWords">
         <h1>Flixster</h1>

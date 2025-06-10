@@ -40,3 +40,7 @@
     font-size: .8vw;
     padding-bottom: 0px;
 }
+
+.movieBox:hover{
+    transform: scale(1.1);
+}
