@@ -26,3 +26,21 @@
     flex-direction: column;
   }
 }
+
+.movieCard{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+
+}
+
+.header{
+
+    padding: 30px;
+    padding-bottom: 50px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: lightblue;
+}

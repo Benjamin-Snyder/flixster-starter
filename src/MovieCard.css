@@ -1,0 +1,40 @@
+.movieBox{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-grow: 1;
+
+
+
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 30px;
+    padding: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+
+    max-width: 10vw;
+    min-width: 15vw;
+
+    max-height: 30vw;
+    text-wrap: wrap;
+
+}
+
+.movieBox img{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    max-width: 10vw;
+    min-width: 15vw;
+
+}
+
+.movieBox h1{
+    font-size: 1.3vw;
+}
+
+.movieBox h2{
+    font-size: .8vw;
+    padding-bottom: 0px;
+}

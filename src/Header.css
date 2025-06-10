@@ -1,0 +1,22 @@
+.headerWords h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.top .searchBar{
+    margin-top: 30px;
+}
+
+.top .FilterDropdown{
+    margin-top: 30px;
+}
