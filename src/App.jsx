@@ -3,10 +3,13 @@ import './App.css';
 import Header from './Header';
 import MovieList from './MovieList.jsx';
 import Footer from './Footer.jsx';
+import MoreButton from './MoreButton.jsx';
+
 
 const App = () => {
   const [filter, setFilter] = useState('A-Z');
   const [searchQuery, setSearchQuery] = useState('');
+  const [pageNumber, setPageNumber] = useState(1);
 
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
@@ -16,6 +19,10 @@ const App = () => {
     setSearchQuery(query);
   };
 
+  const handleMoreClick = () => {
+    setPageNumber(pageNumber + 1);
+  };
+
   return (
     <div className="App">
       <div className="header">
@@ -23,7 +30,11 @@ const App = () => {
       </div>
 
       <div className="movieCard">
-        <MovieList filter={filter} searchQuery={searchQuery} />
+        <MovieList filter={filter} searchQuery={searchQuery} pageNumber = {pageNumber} />
+      </div>
+
+      <div className = "moreButton">
+        <MoreButton onClick={handleMoreClick} filter={filter} searchQuery={searchQuery} pageNumber = {pageNumber}/>
       </div>
 
       <div className = "footer">

@@ -3,24 +3,33 @@ import React from 'react';
 import MovieCard from './MovieCard';
 import './MovieList.css';
 
-const url = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1';
-const options = {
-method: 'GET',
-headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer YOUR_API_KEY'
-}
-};
 
-const MovieList = ({ filter, searchQuery }) => {
-const [movies, setMovies] = useState([]);
 
+
+const MovieList = ({ filter, searchQuery, pageNumber }) => {
+
+    // const url = urlHalf + pageNumber;
+    // console.log(url);
+    const [movies, setMovies] = useState([]);
+    const key = import.meta.env.VITE_API_KEY;
+    const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`;
+    
 useEffect(() => {
+
+    const options = {
+    method: 'GET',
+    headers: {
+    accept: 'application/json',
+    Authorization: `Bearer ${key}`
+    }
+    };
+
     fetch(url, options)
     .then(res => res.json())
     .then(json => setMovies(json.results))
     .catch(err => console.error(err));
 }, []);
+
 
 const filteredMovies = movies.filter(movie =>
     movie.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -45,5 +54,11 @@ return (
     </div>
 );
 };
+
+MovieList.defaultProps = {
+    filter: 'A-Z',
+    searchQuery: '',
+    pageNumber: 1,
+    };
 
 export default MovieList;
