@@ -20,6 +20,7 @@
     background-color: white;
     border: 1px solid black;
     padding:20px;
+    padding-right: 100px;
     width: 60%;
     max-height: 80vh; /* Set a maximum height relative to the viewport */
     margin: auto; /* Center the modal content */
@@ -29,8 +30,9 @@
     overflow-y: auto; /* scrolling */
     box-shadow: 5px 3px 3px grey;
 
-
 }
+
+
 
 .info{
     display: flex;
@@ -40,8 +42,9 @@
 .modalText{
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
-    margin-right: 50px;
+    margin-top: 30px;
+    margin-right: 100px;
+
 }
 
 .titlePic{
@@ -56,15 +59,24 @@
 
 }
 
+#overview{
+    margin-bottom: 30px;
+}
+
 .modalContent h2{
     font-size: 2vw;
 }
 
-.close{
+.close {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
     border: 1px solid black;
     border-radius: 20%;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 2px;
+    font-size: 1.5em;
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
 }

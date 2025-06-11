@@ -1,7 +1,8 @@
-// Modal.jsx
+
 import React from 'react';
 import {useState, useEffect} from 'react';
 import './Modal.css';
+import YoutubeEmbed from './YoutubeEmbed';
 
 
 const getDetails = async (id) => {
@@ -18,10 +19,29 @@ const getDetails = async (id) => {
     try {
         const response = await fetch(url, options);
         const data = await response.json();
-        //console.log(data);
         return data;
     } catch (error) {
         console.error('Error fetching movie details:', error);
+    }
+}
+
+const getVideo = async (id) => {
+    const url = `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
+    const key = import.meta.env.VITE_API_KEY;
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: `Bearer ${key}`
+        }
+    };
+
+    try{
+        const response = await fetch(url, options);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching movie video details:', error);
     }
 }
 
@@ -32,26 +52,41 @@ const Modal = ({ isVisible, movie, onClose }) => {
     const [movieDetails, setMovieDetails] = useState(null);
     const [genres, setGenres] = useState('');
     const[runTime, setRunTime] = useState('');
+    const [videoID, setVideoID] = useState('');
 
     useEffect(() => {
         if (isVisible && movie) {
             getDetails(movie.id).then(data => {
                 setMovieDetails(data);
-                console.log(data);
+
 
                 if (data && data.genres) {
                     const genreNames = data.genres.map(genre => genre.name).join(', ');
                     setGenres(genreNames); // Update genres state
-                    console.log(genreNames);
+
                 }
 
                 if (data && data.runtime) {
                     const runtime = data.runtime;
                     setRunTime(runtime); // Update genres state
-                    console.log(runtime);
+
                 }
 
             });
+
+            getVideo(movie.id).then(videoData => {
+                let isYoutube = false;
+                let i = 0;
+                while (!isYoutube && i < videoData.results.length) {
+                    // make sure the video is from youtube and is a trailer
+                    if (videoData.results[i].site === 'YouTube' && videoData.results[i].type === "Trailer") {
+                        setVideoID(videoData.results[i].key);
+                        isYoutube = true; // Set flag to true to exit loop
+                    }
+                    i++;
+                }
+            });
+
         }
 
 
@@ -76,10 +111,11 @@ const Modal = ({ isVisible, movie, onClose }) => {
                     </div>
 
                     <div className="modalText">
-                        <p>Rating: {movie.vote_average}</p>
-                        <p>Runtime: {runTime} minutes</p>
-                        <p>Genres: {genres}</p>
-                        <p>{movie.overview}</p>
+                        <p> <strong>Rating: </strong>{movie.vote_average}</p>
+                        <p> <strong>Runtime: </strong>{runTime} minutes</p>
+                        <p> <strong>Genres: </strong>{genres}</p>
+                        <p id="overview"> <strong>Overview: </strong>{movie.overview}</p>
+                        <YoutubeEmbed embedId={videoID} />
                     </div>
 
                 </div>

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: white;
 }
 
 .App-header {
@@ -8,7 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  color: white;
+  color: rgb(130, 106, 106);
   padding: 20px;
 }
 
@@ -42,7 +43,7 @@
     padding-bottom: 50px;
     max-width: 100%;
     box-sizing: border-box;
-    background-color: lightblue;
+    background-color: #add8e6;
 }
 
 
