@@ -4,7 +4,7 @@ import Header from './Header';
 import MovieList from './MovieList.jsx';
 import Footer from './Footer.jsx';
 import MoreButton from './MoreButton.jsx';
-import Modal from './Modal.jsx';
+
 
 
 const App = () => {
@@ -29,7 +29,7 @@ const App = () => {
       <div className="header">
         <Header onFilterChange={handleFilterChange} onSearchChange={handleSearchChange} />
       </div>
-        
+
       <div className="movieCard">
         <MovieList filter={filter} searchQuery={searchQuery} pageNumber = {pageNumber} />
       </div>

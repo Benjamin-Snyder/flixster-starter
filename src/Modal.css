@@ -69,14 +69,16 @@
 
 .close {
     position: absolute; /* Position it relative to the nearest positioned ancestor */
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+    top: 1vw; /* Adjust as needed */
+    right: 1vw;
     border: 1px solid black;
     border-radius: 20%;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    font-size: 1.5em;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    padding-top: .1vw;
+    padding-bottom: .1vw;
+    font-size: 1.5vw;
     cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+
+    background-color: rgb(250, 223, 223);
 }
