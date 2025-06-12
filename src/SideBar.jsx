@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './Sidebar.css';
+import './SideBar.css';
 
 const SideBar = ({ onClick, toggleFavoritesView, toggleSeenView, toggleHomeView, pageIcon }) => {
     const getBackgroundColor = (icon) => {
