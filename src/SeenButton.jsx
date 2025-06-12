@@ -10,8 +10,8 @@ function SeenButton({onClick}) {
     const blackSrc = blackSeen;
 
     const tog = (event)=> {
-        event.stopPropagation();
-        setIsSeen(!isSeen)
+        event.stopPropagation(); // stop click event from opening the modal
+        setIsSeen(!isSeen) // toggle seen state
         onClick();
     };
 

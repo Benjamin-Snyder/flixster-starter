@@ -20,7 +20,7 @@ const App = () => {
 
   const key = import.meta.env.VITE_API_KEY;
 
-  useEffect(() => {
+  useEffect(() => { // fetch movies on initial load
     const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`;
     const options = {
       method: 'GET',
@@ -34,10 +34,10 @@ const App = () => {
       .then(res => res.json())
       .then(json => setMovies(prevMovies => [...prevMovies, ...json.results]))
       .catch(err => console.error(err));
-  }, [pageNumber]);
+  }, [pageNumber]); // fetch more movies when pageNumber changes (load more button)
 
 
-  const handleSeenClick = (movie) => {
+  const handleSeenClick = (movie) => { // add or remove movie from seen list
     setSeen((prevSeen) => {
       const isSeen = prevSeen.some((seen) => seen.id === movie.id);
       return isSeen
@@ -48,9 +48,7 @@ const App = () => {
 
 
 
-
-
-  const handleFavoriteClick = (movie) => {
+  const handleFavoriteClick = (movie) => { // add or remove movie from favorites list
     setFavorites((prevFavorites) => {
       const isFav = prevFavorites.some((fav) => fav.id === movie.id);
       return isFav
@@ -60,34 +58,34 @@ const App = () => {
   };
 
 
-  const toggleFavoritesView = () => {
+  const toggleFavoritesView = () => { // switch to favorites view
     setShowSeen(false);
     setShowFavorites(true);
     setPageIcon('favorite');
   };
 
-  const toggleSeenView = () => {
+  const toggleSeenView = () => { // switch to seen view
     setShowFavorites(false);
     setShowSeen(true);
     setPageIcon('seen');
   }
 
-  const toggleHomeView = () => {
+  const toggleHomeView = () => { // switch to home view
     setShowFavorites(false);
     setShowSeen(false);
     setPageIcon('home');
   }
 
-  const handleFilterChange = (event) => {
+  const handleFilterChange = (event) => { // change filter
     setFilter(event.target.value);
   };
 
-  const handleSearchChange = (query) => {
+  const handleSearchChange = (query) => { // change search query
     setSearchQuery(query);
   };
 
-  const handleMoreClick = () => {
-    setPageNumber(pageNumber + 1);
+  const handleMoreClick = () => { // load more movies
+    setPageNumber(pageNumber + 1); // page number changes triggers useEffect to fetch more movies
   };
 
   return (

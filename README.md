@@ -112,7 +112,7 @@ Yes, the states and useEffect that we learned in lab were essential to completin
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+I got all of the required features and stretch goals, but I think I could have made the UI a little bit more polished. I would have liked to add some more animations and transitions.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
@@ -125,5 +125,6 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
 Jackson
 Kevin

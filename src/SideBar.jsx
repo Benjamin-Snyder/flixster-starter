@@ -7,7 +7,7 @@ import blackHome from './assets/home.png';
 
 const SideBar = ({ onClick, toggleFavoritesView, toggleSeenView, toggleHomeView, pageIcon }) => {
     const getBackgroundColor = (icon) => {
-        switch (icon) {
+        switch (icon) { // add an opaque background color for the selected icon
             case 'home':
                 return 'rgba(0,0,0,0.4)'; // Background color for home
             case 'favorite':

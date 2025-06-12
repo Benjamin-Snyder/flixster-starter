@@ -9,24 +9,24 @@ const MovieList = ({ filter, searchQuery, movies, onFavoriteClick, onSeenClick }
     const [selectedMovie, setSelectedMovie] = useState(null);
     const [isModalVisible, setIsModalVisible] = useState(false);
 
-    const handleMovieClick = (movie) => {
+    const handleMovieClick = (movie) => { //open the modal when a movie is clicked
         setSelectedMovie(movie);
         setIsModalVisible(true);
     };
 
-    const filteredMovies = movies.filter(movie =>
-        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+    const filteredMovies = movies.filter(movie => //filter movies based on search query
+        movie.title.toLowerCase().includes(searchQuery.toLowerCase()) // ensure capitialization doesn't matter
     );
 
 
 
-    const sortedMovies = [...filteredMovies].sort((a, b) => {
+    const sortedMovies = [...filteredMovies].sort((a, b) => { //sort movies based on filter
         if (filter === 'A-Z') {
-            return a.title.localeCompare(b.title);
+            return a.title.localeCompare(b.title); // sort alphabetically
         } else if (filter === 'Release Date') {
-            return new Date(b.release_date) - new Date(a.release_date);
+            return new Date(b.release_date) - new Date(a.release_date); // sort by release date
         } else if (filter === 'Rating') {
-            return b.vote_average - a.vote_average;
+            return b.vote_average - a.vote_average; // sort by rating
         }
         return 0;
     });

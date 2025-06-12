@@ -5,7 +5,7 @@ import './Modal.css';
 import YoutubeEmbed from './YoutubeEmbed';
 
 
-const getDetails = async (id) => {
+const getDetails = async (id) => { // Fetch movie details (genres and runtime)
     const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
     const key = import.meta.env.VITE_API_KEY;
     const options = {
@@ -21,11 +21,11 @@ const getDetails = async (id) => {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('Error fetching movie details:', error);
+        console.error('Error fetching movie details:', error); // Log error if any
     }
 }
 
-const getVideo = async (id) => {
+const getVideo = async (id) => { // Fetch movie trailer details
     const url = `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
     const key = import.meta.env.VITE_API_KEY;
     const options = {
@@ -38,10 +38,10 @@ const getVideo = async (id) => {
 
     try{
         const response = await fetch(url, options);
-        const data = await response.json();
+        const data = await response.json(); // populate the data with the response
         return data;
     } catch (error) {
-        console.error('Error fetching movie video details:', error);
+        console.error('Error fetching movie video details:', error); // Log error if any
     }
 }
 
@@ -56,13 +56,13 @@ const Modal = ({ isVisible, movie, onClose }) => {
 
     useEffect(() => {
         if (isVisible && movie) {
-            getDetails(movie.id).then(data => {
+            getDetails(movie.id).then(data => { // Fetch movie details
                 setMovieDetails(data);
-                if (data && data.genres) {
+                if (data && data.genres) { // Check if data and genres exist
                     const genreNames = data.genres.map(genre => genre.name).join(', ');
                     setGenres(genreNames); // Update genres state
                 }
-                if (data && data.runtime) {
+                if (data && data.runtime) { // Check if data and runtime exist
                     const runtime = data.runtime;
                     setRunTime(runtime); // Update genres state
                 }
@@ -80,7 +80,7 @@ const Modal = ({ isVisible, movie, onClose }) => {
                 }
             });
         }
-    }, [isVisible, movie]);
+    }, [isVisible, movie]); // Only run this effect when isVisible or movie changes
 
 
 
