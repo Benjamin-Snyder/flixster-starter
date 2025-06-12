@@ -45,11 +45,7 @@ const App = () => {
     });
   }
 
-  //Debugger
-  useEffect(() => {
-    console.log(seen);
-  }, [seen]);
-  /////////////
+
 
 
   const handleFavoriteClick = (movie) => {
@@ -61,26 +57,18 @@ const App = () => {
     });
   };
 
-  //Debugger
-  useEffect(() => {
-    console.log(favorites);
-  }, [favorites]);
-  /////////////
 
   const toggleFavoritesView = () => {
-    console.log("Favorites View");
     setShowSeen(false);
     setShowFavorites(true);
   };
 
   const toggleSeenView = () => {
-    console.log("Seen View");
     setShowFavorites(false);
     setShowSeen(true);
   }
 
   const toggleHomeView = () => {
-    console.log("Home View");
     setShowFavorites(false);
     setShowSeen(false);
   }
@@ -113,6 +101,7 @@ const App = () => {
           movies={showFavorites ? favorites : showSeen ? seen : movies}
           onFavoriteClick={handleFavoriteClick}
           onSeenClick={handleSeenClick}
+          isFav={(movie) => favorites.some(fav => fav.id === movie.id)}
         />
       </div>
 
