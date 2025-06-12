@@ -16,6 +16,7 @@ const App = () => {
   const [showFavorites, setShowFavorites] = useState(false);
   const [seen, setSeen] = useState([]);
   const [showSeen, setShowSeen] = useState(false);
+  const [pageIcon, setPageIcon] = useState('home');
 
   const key = import.meta.env.VITE_API_KEY;
 
@@ -48,6 +49,7 @@ const App = () => {
 
 
 
+
   const handleFavoriteClick = (movie) => {
     setFavorites((prevFavorites) => {
       const isFav = prevFavorites.some((fav) => fav.id === movie.id);
@@ -61,16 +63,19 @@ const App = () => {
   const toggleFavoritesView = () => {
     setShowSeen(false);
     setShowFavorites(true);
+    setPageIcon('favorite');
   };
 
   const toggleSeenView = () => {
     setShowFavorites(false);
     setShowSeen(true);
+    setPageIcon('seen');
   }
 
   const toggleHomeView = () => {
     setShowFavorites(false);
     setShowSeen(false);
+    setPageIcon('home');
   }
 
   const handleFilterChange = (event) => {
@@ -91,7 +96,7 @@ const App = () => {
         <Header onFilterChange={handleFilterChange} onSearchChange={handleSearchChange} />
       </div>
 
-      <SideBar toggleFavoritesView={toggleFavoritesView} toggleSeenView={toggleSeenView} toggleHomeView={toggleHomeView}/>
+      <SideBar toggleFavoritesView={toggleFavoritesView} toggleSeenView={toggleSeenView} toggleHomeView={toggleHomeView} pageIcon={pageIcon}/>
 
 
       <div className="movieCard">

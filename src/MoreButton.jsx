@@ -4,7 +4,7 @@ import './MoreButton.css';
 
 function MoreButton({ onClick }) {
     return (
-        <button onClick={onClick}>Load More</button>
+        <button className="loadMore"onClick={onClick}>Load More</button>
     );
 }
 

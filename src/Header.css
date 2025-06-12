@@ -1,6 +1,24 @@
 .headerWords h1{
 
-    font-size: 50px;
+    font-family: 'BroadwayFont';
+    font-size: 4.5vw;
+    color: black;
+
+}
+
+.headerWords{
+
+    margin-left: 30px;
+    margin-right: 0px;
+
+
+}
+
+.leftSide{
+    z-index: 2000;
+    display: flex;
+    direction: row;
+    align-items: center;
 
 }
 
@@ -14,9 +32,17 @@
 
 
 .top .searchBar{
-    margin-top: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
 }
 
 .top .FilterDropdown{
     margin-top: 30px;
+}
+
+@font-face {
+    font-family: 'BroadwayFont'; /* Choose a unique font family name */
+    src: url('./src/fonts/Limelight-Regular.ttf') format('truetype'), /* or .ttf, .woff, etc. */
+
+    /* You can include multiple font formats for browser compatibility */
 }

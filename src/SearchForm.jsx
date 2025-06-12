@@ -25,9 +25,10 @@ const handleClearClick = () => {
 
 return (
     <div className="searchBar">
-        <input type="text" value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterKey}/>
-        <button onClick={handleSearchClick}>Search</button>
-        <button onClick={handleClearClick}>Clear</button>
+
+        <input type="text" placeholder="Movie" value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterKey}/>
+        <button className="buttonText" onClick={handleSearchClick}>Search</button>
+        <button className="buttonText" onClick={handleClearClick}>Clear</button>
     </div>
 );
 }

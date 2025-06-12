@@ -7,8 +7,8 @@
 
 
     border: 1px solid black;
-    border-radius: 30px;
-    margin: 30px;
+    border-radius: 3vw;
+    margin: 20px;
     padding: 0px;
     padding-bottom: 0px;
     padding-top: 0px;
@@ -19,7 +19,12 @@
     max-height: 30vw;
     text-wrap: wrap;
 
+    box-shadow: 3px 3px 3px rgb(0, 0, 0);
+    background-color: #524545;
 }
+
+
+
 
 .buttons{
     display: flex;
@@ -28,6 +33,8 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 0px;
+
+
 }
 
 p{
@@ -35,8 +42,8 @@ p{
 }
 
 .poster{
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 3vw;
+    border-top-right-radius: 3vw;
 
     max-width: 10vw;
     min-width: 15vw;
@@ -48,13 +55,16 @@ p{
 .movieBox h3{
     font-size: 1.3vw;
     margin-bottom: 0px;
+    color: white;
 }
 
 .movieBox p{
     font-size: .8vw;
     padding-bottom: 0px;
+    color: white;
 }
 
 .movieBox:hover{
     transform: scale(1.1);
+    box-shadow: 5px 3px 3px rgb(0, 0, 0);
 }

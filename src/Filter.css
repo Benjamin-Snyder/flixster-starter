@@ -4,14 +4,20 @@
 
 
 .SortItems{
-    margin-right: 40px;
+    margin-right: 2vw;
+    margin-top: 0px;
+    margin-bottom: 2vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 label{
-    font-size: 25px
+    font-size: 2vw;
 }
 
 select {
-    width: 70px;
-    height: 35px;
+    width: 5vw;
+    height: 2.5vw;
 }

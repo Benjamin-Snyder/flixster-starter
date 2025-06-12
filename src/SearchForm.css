@@ -3,13 +3,19 @@
 }
 
 input{
-    width: 200px;
-    height: 30px;
+    width: 18vw;
+    height: 2vw;
 }
 
 button{
-    height: 35px;
+    height: 2.2vw;
+    width: 5vw;
     margin-left: 10px;
+
+}
+
+.buttonText{
+    font-size: 1vw;
 }
 
 .searchBar button{
