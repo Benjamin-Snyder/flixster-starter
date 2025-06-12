@@ -10,6 +10,7 @@ function SeenButton({onClick}) {
     const tog = (event)=> {
         event.stopPropagation();
         setIsSeen(!isSeen)
+        onClick();
     };
 
     return(

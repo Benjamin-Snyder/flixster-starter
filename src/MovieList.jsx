@@ -5,7 +5,7 @@ import MovieCard from './MovieCard';
 import Modal from './Modal';
 import './MovieList.css';
 
-const MovieList = ({ filter, searchQuery, movies, onFavoriteClick }) => {
+const MovieList = ({ filter, searchQuery, movies, onFavoriteClick, onSeenClick }) => {
     const [selectedMovie, setSelectedMovie] = useState(null);
     const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -17,6 +17,8 @@ const MovieList = ({ filter, searchQuery, movies, onFavoriteClick }) => {
     const filteredMovies = movies.filter(movie =>
     movie.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
+
+
 
     const sortedMovies = [...filteredMovies].sort((a, b) => {
         if (filter === 'A-Z') {
@@ -32,7 +34,7 @@ const MovieList = ({ filter, searchQuery, movies, onFavoriteClick }) => {
     return (
     <div className="listOfMovies">
         {sortedMovies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} onFavoriteClick={onFavoriteClick} />
+        <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} onFavoriteClick={onFavoriteClick} onSeenClick={onSeenClick} />
         ))}
         <Modal isVisible={isModalVisible} movie={selectedMovie} onClose={() => setIsModalVisible(false)} />
     </div>

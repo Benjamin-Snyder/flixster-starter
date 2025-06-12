@@ -4,14 +4,14 @@ import './MovieCard.css';
 import FavButton from './FavButton.jsx';
 import SeenButton from './SeenButton.jsx';
 
-const MovieCard = ({ movie, onClick, onFavoriteClick }) => {
+const MovieCard = ({ movie, onClick, onFavoriteClick, onSeenClick }) => {
     return (
     <div className="movieBox" onClick={onClick}>
         <img className="poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title} poster`} />
         <h3>{movie.title}</h3>
         <div className="buttons">
         <FavButton onClick={() => onFavoriteClick(movie)} />
-        <SeenButton />
+        <SeenButton onClick={() => onSeenClick(movie)} /> 
         </div>
         <p>Rating: {movie.vote_average}</p>
     </div>
