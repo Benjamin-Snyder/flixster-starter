@@ -24,21 +24,21 @@ const SideBar = ({ onClick, toggleFavoritesView, toggleSeenView, toggleHomeView,
                     <img
                         onClick={toggleHomeView}
                         className="homeNav"
-                        src="./src/assets/home.png"
+                        src="./assets/home.png"
                         alt="Home Navigation"
                         style={{ backgroundColor: pageIcon === 'home' ? getBackgroundColor('home') : 'transparent' }}
                     />
                     <img
                         onClick={toggleFavoritesView}
                         className="favNav"
-                        src="./src/assets/favorite-button-black.png"
+                        src="./assets/favorite-button-black.png"
                         alt="Favorite Movie Navigation"
                         style={{ backgroundColor: pageIcon === 'favorite' ? getBackgroundColor('favorite') : 'transparent' }}
                     />
                     <img
                         onClick={toggleSeenView}
                         className="seenNav"
-                        src="./src/assets/seen-black.png"
+                        src="./assets/seen-black.png"
                         alt="Seen Navigation"
                         style={{ backgroundColor: pageIcon === 'seen' ? getBackgroundColor('seen') : 'transparent' }}
                     />
