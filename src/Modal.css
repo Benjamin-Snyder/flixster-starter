@@ -26,7 +26,6 @@
     transform: translateY(-50%);
     overflow-y: auto; /* scrolling */
     box-shadow: 5px 3px 3px grey;
-
 }
 
 
@@ -40,21 +39,15 @@
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-
-
 }
 
 .titlePic{
-
     margin-left: 50px;
     margin-bottom: 50px;
-
 }
 
 .modalContent img{
     height: 32vh;
-    
-
 }
 
 #overview{
@@ -77,6 +70,5 @@
     padding-bottom: .1vw;
     font-size: 1.5vw;
     cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-
     background-color: rgb(250, 223, 223);
 }

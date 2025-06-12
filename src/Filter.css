@@ -1,13 +1,9 @@
-.SortItems label{
-    margin-right: 10px;
-}
 
 
 .SortItems{
     margin-right: 2vw;
     margin-top: 0px;
     margin-bottom: 2vw;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,6 +12,7 @@
 
 label{
     font-size: 2vw;
+    margin-right: 10px;
 }
 
 select {

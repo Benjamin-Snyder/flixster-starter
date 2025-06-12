@@ -3,15 +3,7 @@
   background-color: #524545;
 }
 
-.App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  color: rgb(130, 106, 106);
-  padding: 20px;
-}
+
 
 @media (max-width: 600px) {
   .movie-card {
@@ -38,12 +30,10 @@
 }
 
 .header{
-
     padding: 30px;
     padding-bottom: 0px;
     padding-top: 0px;
     max-width: 100%;
-
     box-sizing: border-box;
     background-color: #FF9E9E;
 }

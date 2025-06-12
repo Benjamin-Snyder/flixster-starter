@@ -1,5 +1,5 @@
 // MovieList.jsx
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import React from 'react';
 import MovieCard from './MovieCard';
 import Modal from './Modal';
@@ -10,12 +10,12 @@ const MovieList = ({ filter, searchQuery, movies, onFavoriteClick, onSeenClick }
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     const handleMovieClick = (movie) => {
-    setSelectedMovie(movie);
-    setIsModalVisible(true);
+        setSelectedMovie(movie);
+        setIsModalVisible(true);
     };
 
     const filteredMovies = movies.filter(movie =>
-    movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
 
@@ -34,7 +34,7 @@ const MovieList = ({ filter, searchQuery, movies, onFavoriteClick, onSeenClick }
     return (
     <div className="listOfMovies">
         {sortedMovies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} onFavoriteClick={onFavoriteClick} onSeenClick={onSeenClick} />
+            <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} onFavoriteClick={onFavoriteClick} onSeenClick={onSeenClick} />
         ))}
         <Modal isVisible={isModalVisible} movie={selectedMovie} onClose={() => setIsModalVisible(false)} />
     </div>

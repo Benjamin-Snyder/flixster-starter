@@ -20,37 +20,31 @@ const SideBar = ({ onClick, toggleFavoritesView, toggleSeenView, toggleHomeView,
     };
 
     return (
-
-
-            <div className="sideBar" onClick={onClick}>
-                <div className="navButtons">
-                    <img
-                        onClick={toggleHomeView}
-                        className="homeNav"
-                        src={blackHome}
-                        alt="Home Navigation"
-                        style={{ backgroundColor: pageIcon === 'home' ? getBackgroundColor('home') : 'transparent' }}
-                    />
-                    <img
-                        onClick={toggleFavoritesView}
-                        className="favNav"
-                        src={blackFav}
-                        alt="Favorite Movie Navigation"
-                        style={{ backgroundColor: pageIcon === 'favorite' ? getBackgroundColor('favorite') : 'transparent' }}
-                    />
-                    <img
-                        onClick={toggleSeenView}
-                        className="seenNav"
-                        src={blackSeen}
-                        alt="Seen Navigation"
-                        style={{ backgroundColor: pageIcon === 'seen' ? getBackgroundColor('seen') : 'transparent' }}
-                    />
-                </div>
+        <div className="sideBar" onClick={onClick}>
+            <div className="navButtons">
+                <img
+                    onClick={toggleHomeView}
+                    className="homeNav"
+                    src={blackHome}
+                    alt="Home Navigation"
+                    style={{ backgroundColor: pageIcon === 'home' ? getBackgroundColor('home') : 'transparent' }}
+                />
+                <img
+                    onClick={toggleFavoritesView}
+                    className="favNav"
+                    src={blackFav}
+                    alt="Favorite Movie Navigation"
+                    style={{ backgroundColor: pageIcon === 'favorite' ? getBackgroundColor('favorite') : 'transparent' }}
+                />
+                <img
+                    onClick={toggleSeenView}
+                    className="seenNav"
+                    src={blackSeen}
+                    alt="Seen Navigation"
+                    style={{ backgroundColor: pageIcon === 'seen' ? getBackgroundColor('seen') : 'transparent' }}
+                />
             </div>
-
-
-
-
+        </div>
     );
 };
 

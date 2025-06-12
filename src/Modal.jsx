@@ -58,22 +58,15 @@ const Modal = ({ isVisible, movie, onClose }) => {
         if (isVisible && movie) {
             getDetails(movie.id).then(data => {
                 setMovieDetails(data);
-
-
                 if (data && data.genres) {
                     const genreNames = data.genres.map(genre => genre.name).join(', ');
                     setGenres(genreNames); // Update genres state
-
                 }
-
                 if (data && data.runtime) {
                     const runtime = data.runtime;
                     setRunTime(runtime); // Update genres state
-
                 }
-
             });
-
             getVideo(movie.id).then(videoData => {
                 let isYoutube = false;
                 let i = 0;
@@ -86,10 +79,7 @@ const Modal = ({ isVisible, movie, onClose }) => {
                     i++;
                 }
             });
-
         }
-
-
     }, [isVisible, movie]);
 
 
@@ -101,15 +91,12 @@ const Modal = ({ isVisible, movie, onClose }) => {
         <div id="greyBox" onClick={onClose}>
             <div className="modalContent" onClick={e => e.stopPropagation()}>
                 <span className="close" onClick={onClose}>&times;</span>
-
                 <div className="info">
-
                     <div className= "titlePic">
                         <h2>{movie.title}</h2>
                         <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`${movie.title} poster`} />
                         <h3>{`Released: ${movie.release_date}`}</h3>
                     </div>
-
                     <div className="modalText">
                         <p> <strong>Rating: </strong>{movie.vote_average}</p>
                         <p> <strong>Runtime: </strong>{runTime} minutes</p>
@@ -117,11 +104,7 @@ const Modal = ({ isVisible, movie, onClose }) => {
                         <p id="overview"> <strong>Overview: </strong>{movie.overview}</p>
                         <YoutubeEmbed embedId={videoID} />
                     </div>
-
                 </div>
-
-
-
             </div>
         </div>
     );

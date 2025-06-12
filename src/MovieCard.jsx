@@ -6,15 +6,15 @@ import SeenButton from './SeenButton.jsx';
 
 const MovieCard = ({ movie, onClick, onFavoriteClick, onSeenClick, isFav, isSeen }) => {
     return (
-    <div className="movieBox" onClick={onClick}>
-        <img className="poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title} poster`} />
-        <h3>{movie.title}</h3>
-        <div className="buttons">
-            <FavButton isFav={isFav} onClick={() => onFavoriteClick(movie)} />
-            <SeenButton onClick={() => onSeenClick(movie)} />
+        <div className="movieBox" onClick={onClick}>
+            <img className="poster" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title} poster`} />
+            <h3>{movie.title}</h3>
+            <div className="buttons">
+                <FavButton isFav={isFav} onClick={() => onFavoriteClick(movie)} />
+                <SeenButton onClick={() => onSeenClick(movie)} />
+            </div>
+            <p>Rating: {movie.vote_average}</p>
         </div>
-        <p>Rating: {movie.vote_average}</p>
-    </div>
     );
 };
 
