@@ -7,14 +7,12 @@ import MoreButton from './MoreButton.jsx';
 import SideBar from './SideBar.jsx';
 
 
-
-// other imports...
-
 const App = () => {
   const [filter, setFilter] = useState('A-Z');
   const [searchQuery, setSearchQuery] = useState('');
   const [pageNumber, setPageNumber] = useState(1);
   const [movies, setMovies] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   const key = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
@@ -32,6 +30,24 @@ const App = () => {
       .then(json => setMovies(prevMovies => [...prevMovies, ...json.results]))
       .catch(err => console.error(err));
   }, [pageNumber]);
+
+  
+
+  const handleFavoriteClick = (movie) => {
+    setFavorites((prevFavorites) => {
+      const isFav = prevFavorites.some((fav) => fav.id === movie.id);
+      return isFav
+        ? prevFavorites.filter((fav) => fav.id !== movie.id)
+        : [...prevFavorites, movie];
+    });
+  };
+
+
+  useEffect(() => {
+    console.log(favorites);
+  },[favorites])
+
+
 
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
@@ -52,7 +68,8 @@ const App = () => {
       </div>
 
       <div className="movieCard">
-        <MovieList filter={filter} searchQuery={searchQuery} movies={movies} />
+        <MovieList filter={filter} searchQuery={searchQuery} movies={movies} onFavoriteClick={handleFavoriteClick} />
+
       </div>
 
       <div className="moreButton">
