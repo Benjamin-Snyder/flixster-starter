@@ -1,11 +1,13 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import './SeenButton.css'
+import blackSeen from './assets/seen-black.png'
+import greenSeen from './assets/seen-green.png'
 
 function SeenButton({onClick}) {
     const[isSeen, setIsSeen] = useState(false);
-    const greenSrc = './public/seen-green.png'
-    const blackSrc = './public/seen-black.png'
+    const greenSrc = greenSeen;
+    const blackSrc = blackSeen;
 
     const tog = (event)=> {
         event.stopPropagation();

@@ -1,11 +1,13 @@
 import React from "react";
 import {useState} from "react";
 import './FavButton.css'
+import yellowFav from './assets/favorite-button-yellow.png';
+import blackFav from './assets/favorite-button-black.png';
 
 function FavButton({ onClick }) {
     const [isFav, setIsFav] = useState(false);
-    const yellowSrc = './public/favorite-button-yellow.png';
-    const blackSrc = './public/favorite-button-black.png';
+    const yellowSrc = yellowFav;
+    const blackSrc = blackFav;
 
     const tog = (event) => {
         event.stopPropagation();
