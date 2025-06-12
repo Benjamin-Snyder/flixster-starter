@@ -4,7 +4,7 @@ Submitted by: Ben Snyder
 
 Estimated time spent: 18 hours spent in total
 
-Deployed Application (*required*): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (*required*): https://flixster-starter-cdt6.onrender.com/
 
 ### Application Features
 

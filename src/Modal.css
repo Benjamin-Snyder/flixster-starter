@@ -4,17 +4,14 @@
     left: 0;
     top: 0;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    z-index: 900;
+    z-index: 9000;
     overflow: auto;
     position: fixed;
 }
 
 
 
-#megaPhoto{
-    height: 700px;
-    width: 700px;
-}
+
 
 .modalContent {
     background-color: white;
@@ -36,26 +33,27 @@
 
 .info{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .modalText{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    margin-right: 100px;
+
 
 }
 
 .titlePic{
-    margin-right: 150px;
+
     margin-left: 50px;
     margin-bottom: 50px;
 
 }
 
 .modalContent img{
-    height: 30vw;
+    height: 32vh;
+    
 
 }
 

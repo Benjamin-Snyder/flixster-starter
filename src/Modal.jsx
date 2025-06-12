@@ -106,7 +106,7 @@ const Modal = ({ isVisible, movie, onClose }) => {
 
                     <div className= "titlePic">
                         <h2>{movie.title}</h2>
-                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title} poster`} />
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`${movie.title} poster`} />
                         <h3>{`Released: ${movie.release_date}`}</h3>
                     </div>
 
