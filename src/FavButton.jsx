@@ -4,8 +4,8 @@ import './FavButton.css'
 
 function FavButton({ onClick }) {
     const [isFav, setIsFav] = useState(false);
-    const yellowSrc = './src/assets/favorite-button-yellow.png';
-    const blackSrc = './src/assets/favorite-button-black.png';
+    const yellowSrc = './public/favorite-button-yellow.png';
+    const blackSrc = './public/favorite-button-black.png';
 
     const tog = (event) => {
         event.stopPropagation();

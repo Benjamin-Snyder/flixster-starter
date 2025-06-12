@@ -42,7 +42,7 @@
 
 @font-face {
     font-family: 'BroadwayFont'; /* Choose a unique font family name */
-    src: url('./src/fonts/Limelight-Regular.ttf') format('truetype'), /* or .ttf, .woff, etc. */
+    src: url('./public/Limelight-Regular.ttf') format('truetype'), /* or .ttf, .woff, etc. */
 
     /* You can include multiple font formats for browser compatibility */
 }

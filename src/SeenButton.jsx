@@ -4,8 +4,8 @@ import './SeenButton.css'
 
 function SeenButton({onClick}) {
     const[isSeen, setIsSeen] = useState(false);
-    const greenSrc = './src/assets/seen-green.png'
-    const blackSrc = './src/assets/seen-black.png'
+    const greenSrc = './public/seen-green.png'
+    const blackSrc = './public/seen-black.png'
 
     const tog = (event)=> {
         event.stopPropagation();
