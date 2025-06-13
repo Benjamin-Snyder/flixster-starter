@@ -9,10 +9,6 @@
     position: fixed;
 }
 
-
-
-
-
 .modalContent {
     background-color: white;
     border: 1px solid black;
@@ -27,8 +23,6 @@
     overflow-y: auto; /* scrolling */
     box-shadow: 5px 3px 3px grey;
 }
-
-
 
 .info{
     display: flex;

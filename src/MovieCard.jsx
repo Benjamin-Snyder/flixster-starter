@@ -18,5 +18,4 @@ const MovieCard = ({ movie, onClick, onFavoriteClick, onSeenClick, isFav, isSeen
     );
 };
 
-
 export default MovieCard;

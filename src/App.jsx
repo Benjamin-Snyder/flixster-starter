@@ -17,7 +17,6 @@ const App = () => {
   const [seen, setSeen] = useState([]);
   const [showSeen, setShowSeen] = useState(false);
   const [pageIcon, setPageIcon] = useState('home');
-
   const key = import.meta.env.VITE_API_KEY;
 
   useEffect(() => { // fetch movies on initial load
@@ -36,7 +35,6 @@ const App = () => {
       .catch(err => console.error(err));
   }, [pageNumber]); // fetch more movies when pageNumber changes (load more button)
 
-
   const handleSeenClick = (movie) => { // add or remove movie from seen list
     setSeen((prevSeen) => {
       const isSeen = prevSeen.some((seen) => seen.id === movie.id);
@@ -46,8 +44,6 @@ const App = () => {
     });
   }
 
-
-
   const handleFavoriteClick = (movie) => { // add or remove movie from favorites list
     setFavorites((prevFavorites) => {
       const isFav = prevFavorites.some((fav) => fav.id === movie.id);
@@ -56,7 +52,6 @@ const App = () => {
         : [...prevFavorites, movie];
     });
   };
-
 
   const toggleFavoritesView = () => { // switch to favorites view
     setShowSeen(false);
@@ -95,7 +90,6 @@ const App = () => {
       </div>
 
       <SideBar toggleFavoritesView={toggleFavoritesView} toggleSeenView={toggleSeenView} toggleHomeView={toggleHomeView} pageIcon={pageIcon}/>
-
 
       <div className="movieCard">
         <MovieList

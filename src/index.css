@@ -5,7 +5,6 @@ html, body {
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -13,7 +12,6 @@ body {
 }
 
 button {
-
   color: white;
   cursor: pointer;
   font-size: 16px;

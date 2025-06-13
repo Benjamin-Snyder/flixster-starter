@@ -1,9 +1,7 @@
-
 import React from 'react';
 import {useState, useEffect} from 'react';
 import './Modal.css';
 import YoutubeEmbed from './YoutubeEmbed';
-
 
 const getDetails = async (id) => { // Fetch movie details (genres and runtime)
     const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
@@ -45,9 +43,6 @@ const getVideo = async (id) => { // Fetch movie trailer details
     }
 }
 
-
-
-
 const Modal = ({ isVisible, movie, onClose }) => {
     const [movieDetails, setMovieDetails] = useState(null);
     const [genres, setGenres] = useState('');
@@ -83,9 +78,7 @@ const Modal = ({ isVisible, movie, onClose }) => {
     }, [isVisible, movie]); // Only run this effect when isVisible or movie changes
 
 
-
     if (!isVisible || !movieDetails) return null;
-
 
     return (
         <div id="greyBox" onClick={onClose}>

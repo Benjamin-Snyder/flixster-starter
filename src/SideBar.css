@@ -1,7 +1,5 @@
-
 .favNav{
     width: 2vw;
-
 }
 
 .homeNav{
@@ -24,18 +22,14 @@
     background-color: #FF9E9E;
     padding-top: 20px;
     box-sizing: border-box; /* Include padding in the element's total width and height */
-
 }
-
-
 
 .sideBar img {
     width: 2.5vw;
     margin-bottom: 80px;
     cursor: pointer;
-    
-}
 
+}
 
 .navButtons{
     margin-top: 20vh;

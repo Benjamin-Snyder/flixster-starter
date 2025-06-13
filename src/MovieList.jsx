@@ -18,8 +18,6 @@ const MovieList = ({ filter, searchQuery, movies, onFavoriteClick, onSeenClick }
         movie.title.toLowerCase().includes(searchQuery.toLowerCase()) // ensure capitialization doesn't matter
     );
 
-
-
     const sortedMovies = [...filteredMovies].sort((a, b) => { //sort movies based on filter
         if (filter === 'A-Z') {
             return a.title.localeCompare(b.title); // sort alphabetically

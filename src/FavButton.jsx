@@ -8,7 +8,7 @@ function FavButton({ onClick }) {
     const [isFav, setIsFav] = useState(false);
     const yellowSrc = yellowFav; // selected icon
     const blackSrc = blackFav; // unselected icon
-
+    
     const tog = (event) => { // toggle the icon
         event.stopPropagation();
         setIsFav(!isFav);
