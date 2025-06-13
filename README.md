@@ -60,9 +60,9 @@ Deployed Application (*required*): https://flixster-starter-cdt6.onrender.com/
     - [x] Movie grid
     - [x] Footer section
     - [x] *VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS*: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
-  - [ ] *Deployment*
-  - [ ] Website is deployed via Render.
-  - [ ] *VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS*: For ease of grading, please use the deployed version of your website when creating your walkthrough.
+  - [x] *Deployment*
+  - [x] Website is deployed via Render.
+  - [x] *VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS*: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 #### STRETCH FEATURES
 
@@ -100,9 +100,8 @@ Deployed Application (*required*): https://flixster-starter-cdt6.onrender.com/
 
 ### Walkthrough Video
 
-TODO:// Add the embedded URL code to your animated app walkthrough below, ADD_EMBEDDED_CODE_HERE. Make sure the video or gif actually renders and animates when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any *VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS* checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
 
-ADD_EMBEDDED_CODE_HERE
+https://www.loom.com/share/41b5b487804e4bfc80460a8d5a6ec4ae?sid=b929caf2-8331-4441-9724-08f8336b1299
 
 ### Reflection
 
@@ -112,11 +111,11 @@ Yes, the states and useEffect that we learned in lab were essential to completin
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-I got all of the required features and stretch goals, but I think I could have made the UI a little bit more polished. I would have liked to add some more animations and transitions.
+I got all of the required features and stretch goals, but I think I could have made the side bar a little bit more polished. I would have liked to add some more animations, transitions, and not have it just be static on the screen.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I added the mobile responsiveness last second, so the boxes were large in the favorites/seen tab, but they were still in a grid
 
 ### Open-source libraries used
 

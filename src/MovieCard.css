@@ -13,7 +13,6 @@
     text-wrap: wrap;
     box-shadow: 3px 3px 3px rgb(0, 0, 0);
     background-color: #dfd5c1;
-
     flex-basis: 200px;
 }
 
@@ -25,8 +24,7 @@
     margin-right: 5px;
     margin-bottom: 0px;
     align-self: center;
-    gap: 9vw;
-
+    gap: 8vw;
 }
 
 p{
@@ -42,8 +40,6 @@ p{
     width: 80%;
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border: .2vw solid black;
-
-
 }
 
 .movie-box h3{
@@ -55,7 +51,6 @@ p{
     display: flex;
     margin-left: 10%;
     word-wrap: break-word;
-
 }
 
 .movie-box p{
