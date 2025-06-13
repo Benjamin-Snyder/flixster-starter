@@ -42,6 +42,8 @@ const getMovieVideoDetails = async (id) => { // Fetch movie trailer details
     }
 }
 
+
+
 const Modal = ({ isModalVisible, movie, onClose }) => {
     const [movieDetails, setMovieDetails] = useState(null);
     const [genres, setGenres] = useState('');
@@ -85,17 +87,20 @@ const Modal = ({ isModalVisible, movie, onClose }) => {
                 <span className="close-button" onClick={onClose}>&times;</span>
                 <div className="modal-movie-info">
                     <div className= "title-pic">
-                        <h2>{movie.title}</h2>
                         <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`${movie.title} poster`} />
-                        <h3>{`Released: ${movie.release_date}`}</h3>
                     </div>
                     <div className="modal-text">
+                        <h2>{movie.title}</h2>
+                        <p> <strong>Release Date: </strong>{`${movie.release_date}`}</p>
                         <p> <strong>Rating: </strong>{movie.vote_average}</p>
                         <p> <strong>Runtime: </strong>{runTime} minutes</p>
                         <p> <strong>Genres: </strong>{genres}</p>
                         <p id="movie-overview"> <strong>Overview: </strong>{movie.overview}</p>
+                    </div>
+                    <div className="trailer">
                         <YoutubeEmbed embedId={videoID} />
                     </div>
+
                 </div>
             </div>
         </div>

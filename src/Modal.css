@@ -10,8 +10,8 @@
 }
 
 .modal-content {
-    background-color: white;
-    border: 1px solid black;
+    background-color: #d6cdba;
+    border: .2vw solid black;
     padding:20px;
     padding-right: 100px;
     width: 60%;
@@ -22,6 +22,7 @@
     transform: translateY(-50%);
     overflow-y: auto; /* scrolling */
     box-shadow: 5px 3px 3px grey;
+
 }
 
 .modal-movie-info{
@@ -32,16 +33,21 @@
 .modal-text{
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 0px;
+    text-align: left;
+    margin-left: 15vw;
+
 }
 
 .title-pic{
-    margin-left: 50px;
-    margin-bottom: 50px;
+    margin-left: 4vw;
+    margin-bottom: 0px;
+    margin-top: 1vh;
 }
 
 .modal-content img{
     height: 32vh;
+    border: .2vw solid black;
 }
 
 #movie-overview{
@@ -65,4 +71,8 @@
     font-size: 1.5vw;
     cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
     background-color: rgb(250, 223, 223);
+}
+
+.trailer{
+    margin-left: 4vw;
 }

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #524545;
+  background-color: #d6cdba;
 }
 
 @media (max-width: 600px) {
@@ -29,12 +29,12 @@
     padding-top: 0px;
     max-width: 100%;
     box-sizing: border-box;
-    background-color: #FF9E9E;
+    background-color: #887d67;
 }
 
 .footer{
     padding: 5px;
     max-width: 100%;
     box-sizing: border-box;
-    background-color: #FF9E9E;
+    background-color: #887d67;
 }

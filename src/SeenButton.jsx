@@ -1,12 +1,12 @@
 import {useState} from "react";
 import './SeenButton.css'
-import blackSeen from './assets/seen-black.png'
-import greenSeen from './assets/seen-green.png'
+import unselectedSeen from './assets/closed-eye.png'
+import selectedSeen from './assets/open-eye.png'
 
 const SeenButton = ({onClick}) => {
     const[isSeen, setIsSeen] = useState(false);
-    const greenSrc = greenSeen;
-    const blackSrc = blackSeen;
+    const selectedSeenSrc = selectedSeen;
+    const unselectedSeenSrc = unselectedSeen;
 
     const tog = (event)=> {
         event.stopPropagation(); // stop click event from opening the modal
@@ -15,7 +15,7 @@ const SeenButton = ({onClick}) => {
     };
 
     return(
-        <img className="seen-button" onClick={tog} src={isSeen ? greenSrc : blackSrc} alt="Seen Button"/>
+        <img className="seen-button" onClick={tog} src={isSeen ? selectedSeenSrc : unselectedSeenSrc} alt="Seen Button"/>
     )
 }
 

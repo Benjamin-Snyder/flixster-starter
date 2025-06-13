@@ -1,20 +1,18 @@
-.movie-box{
+.movie-box {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
     flex-grow: 1;
-    border: 1px solid black;
-    border-radius: 3vw;
+    border: .2vw solid black;
     margin: 20px;
     padding: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
     max-width: 10vw;
     min-width: 15vw;
     max-height: 30vw;
     text-wrap: wrap;
     box-shadow: 3px 3px 3px rgb(0, 0, 0);
-    background-color: #524545;
+    background-color: #dfd5c1;
 }
 
 .movie-box-buttons{
@@ -24,30 +22,43 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 0px;
+    align-self: center;
+    gap: 9vw;
 }
 
 p{
     margin-top: 0px;
 }
 
-.movie-box-poster{
-    border-top-left-radius: 3vw;
-    border-top-right-radius: 3vw;
-    max-width: 10vw;
-    min-width: 15vw;
-    height: 35vw;
+.movie-box-poster {
+    align-self: center;
+    margin: 10px; 
+    margin-left: 10px; /* Add margin to the left */
+    margin-right: 10px; /* Add margin to the right */
+    height: 20vw;
+    width: 12vw;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: .2vw solid black;
 }
 
 .movie-box h3{
     font-size: 1.3vw;
     margin-bottom: 0px;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0px;
+    display: flex;
+    margin-left: 1.3vw;
+    word-wrap: break-word;
+
 }
 
 .movie-box p{
     font-size: .8vw;
     padding-bottom: 0px;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 1.3vw;
 }
 
 .movie-box:hover{

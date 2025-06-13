@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FF9E9E;
+    background-color: #887d67;
     padding-top: 20px;
     box-sizing: border-box; /* Include padding in the element's total width and height */
 }
@@ -37,8 +37,6 @@
     flex-direction: column;
     margin-bottom: 30px;
     position: relative;
+
 }
 
-.selected{
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}

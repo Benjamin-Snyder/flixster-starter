@@ -1,7 +1,7 @@
 import './SideBar.css';
-// TODO: please choose a better name than blackSeen. Maybe choose selectedSeen
-import blackSeen from './assets/seen-black.png'
-import blackFav from './assets/favorite-button-black.png';
+
+import seenSrc from './assets/open-eye.png'
+import favSrc from './assets/filled-star.png';
 import blackHome from './assets/home.png';
 
 const SideBar = ({ onClick, toggleFavoritesView, toggleSeenView, toggleHomeView, pageIcon }) => {
@@ -31,14 +31,14 @@ const SideBar = ({ onClick, toggleFavoritesView, toggleSeenView, toggleHomeView,
                 <img
                     onClick={toggleFavoritesView}
                     className="fav-nav"
-                    src={blackFav}
+                    src={favSrc}
                     alt="Favorite Movie Navigation"
                     style={{ backgroundColor: pageIcon === 'favorite' ? getBackgroundColor('favorite') : 'transparent' }}
                 />
                 <img
                     onClick={toggleSeenView}
                     className="seen-nav"
-                    src={blackSeen}
+                    src={seenSrc}
                     alt="Seen Navigation"
                     style={{ backgroundColor: pageIcon === 'seen' ? getBackgroundColor('seen') : 'transparent' }}
                 />
