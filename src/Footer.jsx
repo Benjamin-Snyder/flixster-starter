@@ -1,7 +1,5 @@
 
-import React from "react"
-
-function Footer() {
+const Footer = () => {
     return (
         <div className="footer">
             <p>Made by Ben Snyder 2025</p>

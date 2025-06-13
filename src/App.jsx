@@ -20,7 +20,7 @@ const App = () => {
   const key = import.meta.env.VITE_API_KEY;
 
   useEffect(() => { // fetch movies on initial load
-    const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`;
+    const MainMovieDetailAPIurl = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`;
     const options = {
       method: 'GET',
       headers: {
@@ -29,7 +29,7 @@ const App = () => {
       }
     };
 
-    fetch(url, options)
+    fetch(MainMovieDetailAPIurl, options)
       .then(res => res.json())
       .then(json => setMovies(prevMovies => [...prevMovies, ...json.results]))
       .catch(err => console.error(err));
@@ -91,7 +91,7 @@ const App = () => {
 
       <SideBar toggleFavoritesView={toggleFavoritesView} toggleSeenView={toggleSeenView} toggleHomeView={toggleHomeView} pageIcon={pageIcon}/>
 
-      <div className="movieCard">
+      <div className="movie-card">
         <MovieList
           filter={filter}
           searchQuery={searchQuery}
@@ -102,8 +102,8 @@ const App = () => {
         />
       </div>
 
-      <div className="moreButton">
-        <MoreButton onClick={handleMoreClick} />
+      <div className="more-button">
+        <MoreButton handleMoreClick={handleMoreClick} />
       </div>
 
       <div className="footer">

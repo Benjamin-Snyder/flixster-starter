@@ -1,10 +1,9 @@
-import React from 'react';
 import {useState, useEffect} from 'react';
 import './Modal.css';
 import YoutubeEmbed from './YoutubeEmbed';
 
 const getDetails = async (id) => { // Fetch movie details (genres and runtime)
-    const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
+    const MovieDetailAPIurl = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
     const key = import.meta.env.VITE_API_KEY;
     const options = {
     method: 'GET',
@@ -15,7 +14,7 @@ const getDetails = async (id) => { // Fetch movie details (genres and runtime)
     };
 
     try {
-        const response = await fetch(url, options);
+        const response = await fetch(MovieDetailAPIurl, options);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -23,8 +22,8 @@ const getDetails = async (id) => { // Fetch movie details (genres and runtime)
     }
 }
 
-const getVideo = async (id) => { // Fetch movie trailer details
-    const url = `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
+const getMovieVideoDetails = async (id) => { // Fetch movie trailer details
+    const MovieTrailerDetailAPIurl = `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
     const key = import.meta.env.VITE_API_KEY;
     const options = {
         method: 'GET',
@@ -35,7 +34,7 @@ const getVideo = async (id) => { // Fetch movie trailer details
     };
 
     try{
-        const response = await fetch(url, options);
+        const response = await fetch(MovieTrailerDetailAPIurl, options);
         const data = await response.json(); // populate the data with the response
         return data;
     } catch (error) {
@@ -43,14 +42,14 @@ const getVideo = async (id) => { // Fetch movie trailer details
     }
 }
 
-const Modal = ({ isVisible, movie, onClose }) => {
+const Modal = ({ isModalVisible, movie, onClose }) => {
     const [movieDetails, setMovieDetails] = useState(null);
     const [genres, setGenres] = useState('');
-    const[runTime, setRunTime] = useState('');
+    const [runTime, setRunTime] = useState('');
     const [videoID, setVideoID] = useState('');
 
     useEffect(() => {
-        if (isVisible && movie) {
+        if (isModalVisible && movie) {
             getDetails(movie.id).then(data => { // Fetch movie details
                 setMovieDetails(data);
                 if (data && data.genres) { // Check if data and genres exist
@@ -59,10 +58,10 @@ const Modal = ({ isVisible, movie, onClose }) => {
                 }
                 if (data && data.runtime) { // Check if data and runtime exist
                     const runtime = data.runtime;
-                    setRunTime(runtime); // Update genres state
+                    setRunTime(String(runtime)); // Update genres state
                 }
             });
-            getVideo(movie.id).then(videoData => {
+            getMovieVideoDetails(movie.id).then(videoData => {
                 let isYoutube = false;
                 let i = 0;
                 while (!isYoutube && i < videoData.results.length) {
@@ -75,26 +74,26 @@ const Modal = ({ isVisible, movie, onClose }) => {
                 }
             });
         }
-    }, [isVisible, movie]); // Only run this effect when isVisible or movie changes
+    }, [isModalVisible, movie]); // Only run this effect when isVisible or movie changes
 
 
-    if (!isVisible || !movieDetails) return null;
+    if (!isModalVisible || !movieDetails) return null;
 
     return (
-        <div id="greyBox" onClick={onClose}>
-            <div className="modalContent" onClick={e => e.stopPropagation()}>
-                <span className="close" onClick={onClose}>&times;</span>
-                <div className="info">
-                    <div className= "titlePic">
+        <div id="grey-background" onClick={onClose}>
+            <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <span className="close-button" onClick={onClose}>&times;</span>
+                <div className="modal-movie-info">
+                    <div className= "title-pic">
                         <h2>{movie.title}</h2>
                         <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`${movie.title} poster`} />
                         <h3>{`Released: ${movie.release_date}`}</h3>
                     </div>
-                    <div className="modalText">
+                    <div className="modal-text">
                         <p> <strong>Rating: </strong>{movie.vote_average}</p>
                         <p> <strong>Runtime: </strong>{runTime} minutes</p>
                         <p> <strong>Genres: </strong>{genres}</p>
-                        <p id="overview"> <strong>Overview: </strong>{movie.overview}</p>
+                        <p id="movie-overview"> <strong>Overview: </strong>{movie.overview}</p>
                         <YoutubeEmbed embedId={videoID} />
                     </div>
                 </div>

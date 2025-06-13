@@ -1,10 +1,9 @@
-import React from "react";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import './SeenButton.css'
 import blackSeen from './assets/seen-black.png'
 import greenSeen from './assets/seen-green.png'
 
-function SeenButton({onClick}) {
+const SeenButton = ({onClick}) => {
     const[isSeen, setIsSeen] = useState(false);
     const greenSrc = greenSeen;
     const blackSrc = blackSeen;
@@ -16,7 +15,7 @@ function SeenButton({onClick}) {
     };
 
     return(
-        <img className="SeenButton" onClick={tog} src={isSeen ? greenSrc : blackSrc} alt="Seen Button"/>
+        <img className="seen-button" onClick={tog} src={isSeen ? greenSrc : blackSrc} alt="Seen Button"/>
     )
 }
 

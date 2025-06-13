@@ -1,16 +1,16 @@
-.favNav{
+.fav-nav{
     width: 2vw;
 }
 
-.homeNav{
+.home-nav{
     width: 2vw;
 }
 
-.seenNav{
+.seen-nav{
     width: 2vw;
 }
 
-.sideBar {
+.side-bar {
     position: fixed; /* Keeps the sidebar fixed on the side */
     top: 0;
     left: 0;
@@ -24,14 +24,14 @@
     box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
-.sideBar img {
+.side-bar img {
     width: 2.5vw;
     margin-bottom: 80px;
     cursor: pointer;
 
 }
 
-.navButtons{
+.nav-buttons{
     margin-top: 20vh;
     display: flex;
     flex-direction: column;

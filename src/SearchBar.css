@@ -1,4 +1,4 @@
-.searchBar{
+.search-bar{
     margin-left: 40px;
 }
 
@@ -13,10 +13,10 @@ button{
     margin-left: 10px;
 }
 
-.buttonText{
+.button-text{
     font-size: 1vw;
 }
 
-.searchBar button{
+.search-bar button{
     background-color: #282c34;
 }

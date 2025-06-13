@@ -1,4 +1,4 @@
-.movieBox{
+.movie-box{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -17,7 +17,7 @@
     background-color: #524545;
 }
 
-.buttons{
+.movie-box-buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,7 +30,7 @@ p{
     margin-top: 0px;
 }
 
-.poster{
+.movie-box-poster{
     border-top-left-radius: 3vw;
     border-top-right-radius: 3vw;
     max-width: 10vw;
@@ -38,19 +38,19 @@ p{
     height: 35vw;
 }
 
-.movieBox h3{
+.movie-box h3{
     font-size: 1.3vw;
     margin-bottom: 0px;
     color: white;
 }
 
-.movieBox p{
+.movie-box p{
     font-size: .8vw;
     padding-bottom: 0px;
     color: white;
 }
 
-.movieBox:hover{
+.movie-box:hover{
     transform: scale(1.1);
     box-shadow: 5px 3px 3px rgb(0, 0, 0);
 }

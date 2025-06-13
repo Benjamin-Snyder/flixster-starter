@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
-import './SearchForm.css';
+import { useState } from 'react';
+import './SearchBar.css';
 
-function SearchBar({ onSearchChange }) {
+const SearchBar = ({ onSearchChange }) => {
     const [inputValue, setInputValue] = useState('');
-
+    /**
+     * This function updates the input value when the user types in the input field.
+     * @param {React.ChangeEvent<HTMLInputElement>} event
+     */
     const handleInputChange = (event) => { // Update the input value
         setInputValue(event.target.value);
     };
@@ -24,10 +27,10 @@ function SearchBar({ onSearchChange }) {
     };
 
     return (
-        <div className="searchBar">
-            <input type="text" placeholder="Movie" value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterKey}/>
-            <button className="buttonText" onClick={handleSearchClick}>Search</button>
-            <button className="buttonText" onClick={handleClearClick}>Clear</button>
+        <div className="search-bar">
+            <input type="text" placeholder="Search Movie" value={inputValue} onChange={handleInputChange} onKeyDown={handleEnterKey}/>
+            <button className="button-text" onClick={handleSearchClick}>Search</button>
+            <button className="button-text" onClick={handleClearClick}>Clear</button>
         </div>
     );
 }

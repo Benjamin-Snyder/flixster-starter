@@ -1,4 +1,4 @@
-.headerWords h1{
+.header-words h1{
     font-family: 'BroadwayFont';
     font-size: 4.5vw;
     color: black;
@@ -6,25 +6,25 @@
     margin-right: 0px;
 }
 
-.leftSide{
+.left-side{
     z-index: 2000;
     display: flex;
     direction: row;
     align-items: center;
 }
 
-.top{
+.top-of-screen{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.top .searchBar{
+.top-of-screen .search-bar{
     margin-top: 5px;
     margin-left: 10px;
 }
 
-.top .FilterDropdown{
+.top-of-screen .filter-dropdown{
     margin-top: 30px;
 }

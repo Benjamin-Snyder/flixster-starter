@@ -1,6 +1,5 @@
-
-import React from 'react';
 import './SideBar.css';
+// TODO: please choose a better name than blackSeen. Maybe choose selectedSeen
 import blackSeen from './assets/seen-black.png'
 import blackFav from './assets/favorite-button-black.png';
 import blackHome from './assets/home.png';
@@ -20,25 +19,25 @@ const SideBar = ({ onClick, toggleFavoritesView, toggleSeenView, toggleHomeView,
     };
 
     return (
-        <div className="sideBar" onClick={onClick}>
-            <div className="navButtons">
+        <div className="side-bar" onClick={onClick}>
+            <div className="nav-buttons">
                 <img
                     onClick={toggleHomeView}
-                    className="homeNav"
+                    className="home-nav"
                     src={blackHome}
                     alt="Home Navigation"
                     style={{ backgroundColor: pageIcon === 'home' ? getBackgroundColor('home') : 'transparent' }}
                 />
                 <img
                     onClick={toggleFavoritesView}
-                    className="favNav"
+                    className="fav-nav"
                     src={blackFav}
                     alt="Favorite Movie Navigation"
                     style={{ backgroundColor: pageIcon === 'favorite' ? getBackgroundColor('favorite') : 'transparent' }}
                 />
                 <img
                     onClick={toggleSeenView}
-                    className="seenNav"
+                    className="seen-nav"
                     src={blackSeen}
                     alt="Seen Navigation"
                     style={{ backgroundColor: pageIcon === 'seen' ? getBackgroundColor('seen') : 'transparent' }}

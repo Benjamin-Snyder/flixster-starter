@@ -1,6 +1,4 @@
-// MovieList.jsx
 import { useState } from 'react';
-import React from 'react';
 import MovieCard from './MovieCard';
 import Modal from './Modal';
 import './MovieList.css';
@@ -26,15 +24,15 @@ const MovieList = ({ filter, searchQuery, movies, onFavoriteClick, onSeenClick }
         } else if (filter === 'Rating') {
             return b.vote_average - a.vote_average; // sort by rating
         }
-        return 0;
+        return [];
     });
 
     return (
-    <div className="listOfMovies">
+    <div className="list-of-movies">
         {sortedMovies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} onClick={() => handleMovieClick(movie)} onFavoriteClick={onFavoriteClick} onSeenClick={onSeenClick} />
         ))}
-        <Modal isVisible={isModalVisible} movie={selectedMovie} onClose={() => setIsModalVisible(false)} />
+        <Modal isModalVisible={isModalVisible} movie={selectedMovie} onClose={() => setIsModalVisible(false)} />
     </div>
     );
 };

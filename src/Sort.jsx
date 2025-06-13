@@ -1,9 +1,8 @@
-import React from 'react';
-import './Filter.css';
+import './Sort.css';
 
-function Filter({ onFilterChange }) {
+const Sort = ({ onFilterChange }) => {
     return (
-        <div className="SortItems">
+        <div className="sort-items">
             <label htmlFor="Filter">Sort by</label>
             <select name="Filter" id="filterBox" onChange={onFilterChange}>
                 <option value="A-Z">A-Z</option>
@@ -14,4 +13,4 @@ function Filter({ onFilterChange }) {
     );
 }
 
-export default Filter;
+export default Sort;

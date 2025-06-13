@@ -1,4 +1,4 @@
-#greyBox{
+#grey-background{
     width: 100%;
     height: 100%;
     left: 0;
@@ -9,7 +9,7 @@
     position: fixed;
 }
 
-.modalContent {
+.modal-content {
     background-color: white;
     border: 1px solid black;
     padding:20px;
@@ -24,35 +24,35 @@
     box-shadow: 5px 3px 3px grey;
 }
 
-.info{
+.modal-movie-info{
     display: flex;
     flex-direction: column;
 }
 
-.modalText{
+.modal-text{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
 }
 
-.titlePic{
+.title-pic{
     margin-left: 50px;
     margin-bottom: 50px;
 }
 
-.modalContent img{
+.modal-content img{
     height: 32vh;
 }
 
-#overview{
+#movie-overview{
     margin-bottom: 30px;
 }
 
-.modalContent h2{
+.modal-content h2{
     font-size: 2vw;
 }
 
-.close {
+.close-button {
     position: absolute; /* Position it relative to the nearest positioned ancestor */
     top: 1vw; /* Adjust as needed */
     right: 1vw;

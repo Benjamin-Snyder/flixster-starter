@@ -1,10 +1,8 @@
-
-import React from 'react';
 import './MoreButton.css';
 
-function MoreButton({ onClick }) {
+const MoreButton = ({ handleMoreClick }) => {
     return (
-        <button className="loadMore"onClick={onClick}>Load More</button>
+        <button className="loadMore" onClick={handleMoreClick}>Load More</button>
     );
 }
 
