@@ -115,7 +115,7 @@ I got all of the required features and stretch goals, but I think I could have m
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-I added the mobile responsiveness last second, so the boxes were large in the favorites/seen tab, but they were still in a grid
+I added the mobile responsiveness last second, so the boxes were large in the favorites/seen tab, but they were still in a grid. Also, for some reason, when I pressed the filter option, the drop down menu didnt show up on the recording, but was on my screen.
 
 ### Open-source libraries used
 
