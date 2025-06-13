@@ -7,12 +7,14 @@
     border: .2vw solid black;
     margin: 20px;
     padding: 0px;
-    max-width: 10vw;
-    min-width: 15vw;
-    max-height: 30vw;
+    max-width: 100%;
+    width: 16%;
+    max-height: 100%;
     text-wrap: wrap;
     box-shadow: 3px 3px 3px rgb(0, 0, 0);
     background-color: #dfd5c1;
+
+    flex-basis: 200px;
 }
 
 .movie-box-buttons{
@@ -24,6 +26,7 @@
     margin-bottom: 0px;
     align-self: center;
     gap: 9vw;
+
 }
 
 p{
@@ -32,33 +35,35 @@ p{
 
 .movie-box-poster {
     align-self: center;
-    margin: 10px; 
+    margin: 10px;
     margin-left: 10px; /* Add margin to the left */
     margin-right: 10px; /* Add margin to the right */
-    height: 20vw;
-    width: 12vw;
+    height: 80%;
+    width: 80%;
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border: .2vw solid black;
+
+
 }
 
 .movie-box h3{
-    font-size: 1.3vw;
+    font-size: 110%;
     margin-bottom: 0px;
     color: rgb(0, 0, 0);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 0px;
     display: flex;
-    margin-left: 1.3vw;
+    margin-left: 10%;
     word-wrap: break-word;
 
 }
 
 .movie-box p{
-    font-size: .8vw;
+    font-size: 70%;
     padding-bottom: 0px;
     color: rgb(0, 0, 0);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 1.3vw;
+    margin-left: 10%;
 }
 
 .movie-box:hover{

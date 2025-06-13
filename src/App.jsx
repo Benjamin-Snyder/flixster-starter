@@ -89,7 +89,9 @@ const App = () => {
         <Header onFilterChange={handleFilterChange} onSearchChange={handleSearchChange} />
       </div>
 
-      <SideBar toggleFavoritesView={toggleFavoritesView} toggleSeenView={toggleSeenView} toggleHomeView={toggleHomeView} pageIcon={pageIcon}/>
+      <div className="side-bar">
+        <SideBar toggleFavoritesView={toggleFavoritesView} toggleSeenView={toggleSeenView} toggleHomeView={toggleHomeView} pageIcon={pageIcon}/>
+      </div>
 
       <div className="movie-card">
         <MovieList

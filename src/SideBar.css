@@ -1,13 +1,13 @@
 .fav-nav{
-    width: 2vw;
+    width: 20%;
 }
 
 .home-nav{
-    width: 2vw;
+    width: 20%;
 }
 
 .seen-nav{
-    width: 2vw;
+    width: 20%;
 }
 
 .side-bar {
@@ -39,4 +39,3 @@
     position: relative;
 
 }
-

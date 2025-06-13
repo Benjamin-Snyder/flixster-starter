@@ -16,6 +16,12 @@
   }
 }
 
+.side-bar{
+  height: 100%;
+  width: 100%;
+}
+
+
 .movie-card{
   display: flex;
   flex-direction: row;
